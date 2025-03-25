@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: debian:12
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
           sudo apt update
           sudo apt install -y libncurses5-dev libncursesw5-dev zlib1g-dev gawk gettext libssl-dev xsltproc rsync unzip python-is-python3 zstd
           wget -q ${{ github.event.inputs.sdkurl }}
-          tar --use-compress-program=zstd -xf $(basename ${{ github.event.inputs.sdkurl }})
+          tar -xf $(basename ${{ github.event.inputs.sdkurl }})
           mv $(basename ${{ github.event.inputs.sdkurl }} .tar.xz) wrtsdk          
           echo "src-link cusrepo ${{ github.event.inputs.astversion }}" > wrtsdk/feeds.conf
           export pkgdir=${{ github.event.inputs.astversion }}
