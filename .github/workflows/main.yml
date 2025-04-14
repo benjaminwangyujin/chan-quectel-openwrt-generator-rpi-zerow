@@ -5,7 +5,7 @@ on:
     inputs:
       sdkurl:
         required: true
-        description: Download url for Openwrt sdk file in tar.xz or tar.zst format
+        description: https://downloads.openwrt.org/releases/24.10.0/targets/ramips/mt7621/openwrt-sdk-24.10.0-ramips-mt7621_gcc-13.3.0_musl.Linux-x86_64.tar.zst
       astversion:
         type: choice
         description: Choose Asterisk version - make sure it corresponds with Openwrt version chosen
