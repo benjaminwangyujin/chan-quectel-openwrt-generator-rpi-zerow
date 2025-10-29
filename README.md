@@ -24,5 +24,5 @@ The openwrt minor version is not very important, if facing issues with a particu
 
 Provide link to sdk, choose the correct Asterisk version and run the workflow action, in about 10 minutes the ipk should be ready for download within a zip file. This can be installed or you can use 7zip to manually extract chan_quectel.so for lib replacement
 
-
+if using other branchs of openwrt, you need to change regex,such as  using  immortalwrt， yaml should be changed to regex: '^.+immortalwrt-sdk-([\d]*).*?-([a-z,0-9]*)-.+$' 
 
